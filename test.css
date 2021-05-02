@@ -1,0 +1,181 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section.menu {
+    background-color:aquamarine;
+    text-align: center;
+
+}
+
+section.menu > ul{
+    list-style-type: none; /* Bỏ đánh dấu trong thẻ ul */
+    padding: 0; /*Cho nd trong ul sát với viền */
+    margin: 0;
+    display: flex; /* Cho các nội dung trong thẻ ul nằm ngang*/
+}
+
+section.menu > ul > li{
+    padding: 15px 8px; /* Dãn khoảng các giữa các nd trong li*/
+    border-right: 1px solid white; /* tạo kẻ gạch giữa từng nội dung trong thẻ ul > li */
+
+}
+
+section.menu > ul > li > a{
+    text-decoration: none; /* Bỏ dấu gạch dưới ở liên kết trong thẻ a */ 
+}
+
+section.menu > ul > li:hover{
+    background-color: teal;
+    color: white;
+}
+
+.left {
+    float: left; /* Chỉnh menu thẳng hàng ở 2 thẻ ul khách nhau*/
+}
+
+.right {
+    float: right; /* Chỉnh menu thẳng hàng ở 2 thẻ ul khách nhau*/
+}
+
+.clearfix {
+    overflow: hidden; /* Đưa lại màu về ban đầu sau khi .left .right */
+}
+
+section.menu > ul.left > li:last-child {
+    border-right: none; /* Bỏ gạch chân con cuối cùng*/
+}
+
+section.banner > div > img{
+    max-width: 500px; /* Chỉnh kích thước ảnh*/
+}
+
+section.banner {
+    background: linear-gradient(white,red);
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+section.tintuc {
+    background-color: rgb(163, 157, 158);
+}
+
+section.tintuc > div.posts{
+    background-color: white;
+    width: 70%;
+    margin: 5px auto; /*Cách căn block vào chình giữa */
+}
+
+section.tintuc > h1 {
+    color: sienna;
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    border-bottom: 1px solid sienna ;
+}
+
+section.tintuc ul {
+    list-style-type: none;
+}
+
+div.posts {
+    border-radius: 1%;
+}
+
+div.post {
+    display: flex; /* Chỉnh thành hàng ngang*/
+    border-bottom: 1px solid rgb(163, 157, 158);
+    margin: 5px;
+}
+
+.col1 {
+    width: 10%;
+}
+
+.col2 {
+    width: 40%;
+}
+
+.col3{
+    width: 20%;
+}
+
+.col4{
+    width: 30%;
+    direction: rtl; /* Hiện thị từ phải qua trái*/
+}
+
+.col > img {
+    width: 100%; /* Ảnh chiến 100% của vùng đc phân*/
+}
+
+.post ul ,p{
+    margin: 0;
+}
+
+.col {
+    padding: 10px; /*Khoảng cách nhìn đẹp hơn */
+}
+
+.col > img{
+    background-color: black;
+    border-radius: 70%; /* Bo tròn avatar*/
+}
+
+section.ads > div {
+    position: fixed;
+    background: linear-gradient(white, black);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+div.adsl{
+    left: 9px;
+}
+
+div.adsr{
+    right: 9px;
+}
+
+section.footer {
+  background-color: #aa261b;
+  width: 100%;
+  min-height: 150px;
+  color: white;
+}
+
+.tooltipcontent {
+    background-color: chocolate;
+    padding: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    display: none; /* Ân thông tin*/
+    position: absolute; /*Hiện ra và ko thay đổi trang*/
+    margin-left: -140px;
+    text-align: left;
+    max-width: 300px;
+    
+}
+
+.tooltip:hover .tooltipcontent{
+    display: block; /* Rê chuột đến thì thông tin tự hiện ra*/
+}
+
+.tooltipcontent ul{
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+/* Tạo dấu mũi tên khi di chuột vào đâu đó*/
+.tooltipcontent::after{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent chocolate transparent;
+    position: absolute;
+    top: -20px;
+    right: 10%;
+}
